@@ -9,6 +9,7 @@ const images = [
   "/images/yamunotri-cropped.png",
   "/images/Globus_Journey.png"
 ];
+
 const cards = [
   { title: 'Mountain View', copy: 'Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains', button: 'View Trips' },
   { title: 'To The Beach', copy: 'Plan your next beach trip with these fabulous destinations', button: 'View Trips' },
