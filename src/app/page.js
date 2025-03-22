@@ -36,6 +36,20 @@ const HomePage = () => {
     setIsModalOpen(false);
   };
 
+
+//   const carousel = document.getElementById('carousel');
+//   const scrollLeftButton = document.getElementById('scrollLeft');
+//   const scrollRightButton = document.getElementById('scrollRight');
+
+//   scrollLeftButton.addEventListener('click', () => {
+//     carousel.scrollBy({ left: -320, behavior: 'smooth' }); // Adjust the scroll distance as needed
+//   });
+
+//   scrollRightButton.addEventListener('click', () => {
+//     carousel.scrollBy({ left: 320, behavior: 'smooth' }); // Adjust the scroll distance as needed
+//   });
+
+
   return (
     <div className="flex flex-col min-h-screen text-gray-900">
       {/* Fixed Navigation Bar */}
@@ -274,10 +288,73 @@ const HomePage = () => {
           </div>
         </div>
 
-        {/* Blank Section */}
-        <div className="blank-section h-64 bg-gray-100">
-          {/* You can add content here if needed */}
-        </div>
+        <div class="relative">
+  {/* <!-- Left Button --> */}
+  <button id="scrollLeft" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-75 rounded-full p-2 shadow-lg z-10">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+    </svg>
+  </button>
+
+  {/* <!-- Image Carousel --> */}
+  <div id="carousel" class="snap-x snap-mandatory overflow-x-scroll hide-scrollbar flex space-x-6 w-full h-[250px] p-4">
+    {/* <!-- Repeat for each image --> */}
+    <div class="snap-center shrink-0 w-80 h-full relative group">
+      <img src="/images/himachal2.jpg" class="w-full h-full object-cover rounded-lg transition-transform transform group-hover:scale-105" />
+      {/* <!-- Book Trip Button --> */}
+      <div class="absolute inset-0 flex items-center justify-center">
+        <button class="bg-black-500 text-white px-6 py-2 rounded-lg shadow-md hover:bg-white-600 transition-opacity opacity-0 group-hover:opacity-80">
+        <p>Discover the Unseen!</p>
+          Book Trip
+        </button>
+      </div>
+    </div>
+    <div class="snap-center shrink-0 w-80 h-full relative group">
+      <img src="/images/kashmir11.jpg" class="w-full h-full object-cover rounded-lg transition-transform transform group-hover:scale-105" />
+      <div class="absolute inset-0 flex items-center justify-center">
+      <button class="bg-black-500 text-white px-6 py-2 rounded-lg shadow-md hover:bg-white-600 transition-opacity opacity-0 group-hover:opacity-80">
+      Book Trip
+        </button>
+      </div>
+    </div>
+    <div class="snap-center shrink-0 w-80 h-full relative group">
+      <img src="/images/kerala12.jpg" class="w-full h-full object-cover rounded-lg transition-transform transform group-hover:scale-105" />
+      <div class="absolute inset-0 flex items-center justify-center">
+        <button class="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-600 transition-opacity opacity-0 group-hover:opacity-100">
+          Book Trip
+        </button>
+      </div>
+    </div>
+    <div class="snap-center shrink-0 w-80 h-full relative group">
+      <img src="/images/nainital12.jpg" class="w-full h-full object-cover rounded-lg transition-transform transform group-hover:scale-105" />
+      <div class="absolute inset-0 flex items-center justify-center">
+        <button class="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-600 transition-opacity opacity-0 group-hover:opacity-100">
+          Book Trip
+        </button>
+      </div>
+    </div>
+    <div class="snap-center shrink-0 w-80 h-full relative group">
+      <img src="/images/sikkim12.jpg" class="w-full h-full object-cover rounded-lg transition-transform transform group-hover:scale-105" />
+      <div class="absolute inset-0 flex items-center justify-center">
+        <button class="bg-blue-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-blue-600 transition-opacity opacity-0 group-hover:opacity-100">
+          Book Trip
+        </button>
+      </div>
+    </div>
+    {/* <!-- Repeat for other images --> */}
+  </div>
+
+  {/* <!-- Right Button --> */}
+  <button id="scrollRight" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-75 rounded-full p-2 shadow-lg z-10">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+    </svg>
+  </button>
+</div>
+
+
+
+
 
         {/* Modal */}
         {isModalOpen && (
